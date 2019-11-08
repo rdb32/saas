@@ -1,0 +1,737 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: Muli, sans-serif;
+    margin: 0;
+}
+
+/* Style the headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Josefin Sans, sans-serif;
+}
+
+/* Style the header */
+.header {
+    overflow: hidden;
+    background-color: #004167;
+    background-image: url(images/bbox_logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    top: 0;
+}
+
+/* Style the header links */
+.header a {
+    float: left;
+    font-family: Josefin Sans;    
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px; 
+}
+
+/* Float the user and hamburger menu to the right */
+.header-right {
+    float: right;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5em; 
+    padding: 8px 16px;
+}
+ 
+/* Style the login and signup buttons */
+.in {
+    background-color: #0071B3;
+    color: #fff;
+}
+
+.up {
+    background-color: #f1f1f1;
+    color: #004167;
+}
+
+/* Style the user avatar */
+.avatar {
+    overflow: hidden;
+}
+
+.avatar a {
+    display: inline-block;
+    text-align: left;
+    text-decoration: none;
+    color: #fff;
+    padding: 4px 16px;
+}
+
+.image {
+  opacity: 1;
+  display: inline-block;
+  vertical-align: middle;    
+  border-radius: 50%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.avatar:hover .image {
+  opacity: 0.3;    
+}
+
+/* Style the logo link */
+.menubtn {
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}
+
+/* Style the sidenav */
+.sidenav {
+  display: none;
+  width: 90px; /* 0 width - change this with JavaScript */
+  height: 92%;       
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  margin-top: 50px;
+  background-color: #004167;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.4s;
+}
+
+.sidenav a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 16px;
+}
+
+.sidenav a:hover {
+  background-color: #0071B3;
+}
+
+.active {
+  background-color: #3FA9F0;
+}
+
+/* Style the main container */
+.container {
+    background-color: #fff;
+    display: grid;
+    margin: 66px 16px; 
+    grid-gap: 16px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(181px, 225px));
+    grid-auto-rows: minmax(248px, 275px);
+    grid-auto-flow: dense;
+}
+
+.container > div {
+    justify-content: center;
+    font-size: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.container article {
+    margin: 16px;
+    font-size: 14px;
+    color: #004167;
+}
+
+.container article:hover {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.container > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container img:hover {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+
+/* Style the different size images */
+.horizontal {
+    grid-column: span 2;
+}
+
+.vertical {
+    grid-row: span 2;
+}
+
+.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+
+/* Style the add new item box */
+.add {
+  padding: 8px 32px 0 0;
+  text-align: center;
+  line-height: 2;
+}
+
+.add ul {
+    list-style: none;
+    color: #ddd;
+}
+
+.add ul p {
+    font-size: 14px;
+    line-height: 1.1;
+}
+
+.add button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #FF5D00;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.add button:hover {
+  opacity: 0.7;
+}
+
+/* Style the box categories */
+.boxes {
+    display: flex;
+    height: 150px;
+    width: 100%;
+    color: #004167;
+    font-size: 24px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the container buttons */
+.container > div > b:hover {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+/* Style the user profile page */
+.card {
+    text-align: center;
+    color: #004167;
+    line-height: 0 ;
+}
+
+.card ul {
+    color: #0071B3;
+    cursor: pointer;
+    list-style: none;
+    font-size: 12px;
+    line-height: 1.6;
+    padding: 0 ;
+}
+
+.card li:hover {
+    color: #3FA9F0;
+}
+
+.card img {
+  border-radius: 50%;
+  border-color: white;
+  border-style: solid;
+  border-width: 5px;
+  margin: -30px 0 0 0;
+}
+
+.card img:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.card button {
+  border: none;
+  color: #fff;    
+  background-color: #004167;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  padding: 0 0 15px 0;
+}
+
+.card button:hover {
+    background-color: #3FA9F0;
+}
+
+/* Style the price plan tables */
+.price {
+    background-color: #fff;
+    text-align: center;
+    color: #004167;
+    line-height: 0 ;
+}
+
+.price ul {
+    color: #0071B3;
+    cursor: pointer;
+    list-style: none;
+    font-size: 12px;
+    line-height: 1.7;
+    padding: 0 ;
+}
+
+.price li:hover {
+    color: #3FA9F0;
+}
+
+.price img {
+  border-radius: 50%;
+  border-color: white;
+  border-style: solid;
+  border-width: 5px;
+  margin: -30px 0 0 0;
+}
+
+.price img:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.price button {
+  border: none;
+  color: #fff;    
+  background-color: #004167;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  padding: 0 0 15px 0;
+}
+
+.price button:hover {
+    background-color: #3FA9F0;
+}
+
+/* Style the user profile information */
+.userinfo {
+   
+}
+
+.userinfo article {
+    margin: 8px 16px ;
+    text-align: left;
+}
+
+.userinfo article:hover {
+    opacity: 1;
+}
+
+.userinfo button {
+    border: none;
+    border-radius: 5px;
+    color: #fff;    
+    background-color: #004167;
+    text-align: center;
+    cursor: pointer;
+    height: 24px;
+    width: 100%;
+}
+
+/* Style form input labels */
+label {
+    text-align: left;
+    font-size: 11px;
+    line-height: 2;
+}
+
+/* Style form inputs */
+input[type=text], input[type=password] {
+  width: 99%;
+  padding: 5px;
+  margin: 5px 0 ;
+  display: inline-block;
+  border: none;
+  background-color: #ddd;
+  font-size: 10px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #f1f1f1;
+  outline: none;
+}
+
+/* Style the main wrapper */
+.wrapper {
+    display: grid;
+    grid-gap: 16px;
+    background-color: #004167;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    grid-template-columns: minmax(115px, auto);
+    grid-auto-rows: minmax(200px, auto);
+}
+
+/* Style the hero section on landing page */
+.hero {
+    padding: 50px 16px 16px;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.hero img {
+    padding: 25px 30px 10px;
+    width: 100%;
+}
+
+.hero button {
+    background-color: #FF5D00;
+    height: 35px;
+    color: #fff;
+    font-family: Josefin Sans;
+    font-size: 1em;
+    border: none;
+    outline-color: #004167;
+}
+
+.hero button:hover {
+    cursor: pointer;
+}
+
+.hero button:active {
+    outline-color: #3FA9F0;
+}
+
+.signin {
+    background-color: #fff;
+    margin: 100px 50px;
+    padding: 50px 16px 16px;
+    color: #004167;
+    width: 350px;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.signin button {
+    background-color: #0071B3;
+    color: #fff;
+    padding: 8px;
+    width: 155px;
+}
+
+.signin button:hover {
+    cursor: pointer;
+}
+
+.signin article {
+    text-align: left;
+}
+
+.signin span {
+    display: inline-block;
+    position: relative;
+}
+
+.signin span:before,
+.signin span:after {
+  content: "";
+  position: absolute;
+  height: 10px;
+  border-bottom: 1px solid #004167;
+  top: 0;
+  width: 120px;
+}
+.signin span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.signin span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+/* Style the landing page content grid */
+.content {
+    display: grid;
+    background-color: #fff;
+    color: #004167;
+    font-size: 12px;
+    justify-content: center;
+    grid-template-columns: repeat(3, minmax(120px, 300px)) ;
+    grid-auto-rows: minmax(248px, auto);
+}
+
+.content i {
+    font-size: 38px ;
+    text-align: center;
+}
+
+.content p {
+    text-align: left;
+}
+
+.note {
+    padding: 32px 16px ;
+    text-align: center;
+    background-color: #fff;
+    color: #004167;
+    grid-column-start: 1 ;
+    grid-column-end: 2;
+}
+
+.pic {
+    padding: 32px 16px ;
+    text-align: center;
+    background-color: #fff;
+    color: #004167;
+    grid-column-start: 2 ;
+    grid-column-end: 3;
+}
+
+.link {
+    padding: 32px 16px;
+    text-align: center;
+    background-color: #fff;
+    color: #004167;
+    grid-column-start: 3 ;
+}
+
+.tagline {
+    padding: 32px 16px 0px;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.casual {
+    background-color: #fff;
+    text-align: center;
+    color: #004167;
+    grid-column-start: 1 ;
+    grid-column-end: 2 ;
+}
+
+.pro {
+    background-color: #fff;
+    text-align: center;
+    color: #004167;
+    grid-column-start: 2 ;
+    grid-column-end: 3 ;
+}
+
+.expert {
+    background-color: #fff;
+    text-align: center;
+    color: #004167;
+    grid-column-start: 3 ;
+    grid-column-end: 4 ;
+}
+
+.plan {
+    display: grid;
+    grid-gap: 16px;
+    background-color: #004167;
+    padding: 0px 16px 32px;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, minmax(120px, 200px)) ;
+    grid-auto-rows: minmax(248px, auto);
+}
+
+.plan button {
+  border: none;
+  color: #fff;    
+  background-color: #0071B3;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  padding: 0 0 15px 0;
+}
+
+.plan button:hover {
+    background-color: #3FA9F0;
+}
+
+.plan ul {
+    color: #0071B3;
+    cursor: pointer;
+    list-style: none;
+    font-size: 12px;
+    line-height: 1.7;
+    padding: 0 ;
+}
+
+.plan li:hover {
+    color: #3FA9F0;
+}
+
+.topnav {
+    height: 25px ;
+    margin: 81px 32px ;
+    padding: 0px 16px;
+    overflow: hidden;
+    outline: thick solid #3FA9F0;
+    background-color: #3FA9F0;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  color: #0071B3;
+  cursor: pointer;
+}
+
+.topnav a.active {
+  background-color: #0071B3;
+  color: white;
+}
+
+.topnav-centered a {
+  float: none;
+}
+
+.topnav-right {
+    float: right;
+}
+
+.blank {
+    outline: thick solid #3FA9F0;
+    background-color: #fff;
+    margin: -100px 32px 100px ;
+    padding: 16px;
+    color: #004167;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.blank article {
+    text-align: left;
+}
+
+.blank i {
+    font-size: 7em;
+}
+
+.blank a {
+    color: #004167;
+}
+
+.blank a:hover {
+  color: #0071B3;
+  cursor: pointer;
+}
+
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#myBar {
+  width: 0%;
+  height: 30px;
+  background-color: #3FA9F0;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+/* Style the footer */
+.footer {
+   display: grid;
+   background-color: #004167;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+    height: 50px;
+    grid-gap: 0px;
+    grid-template-columns: auto 228px;
+    grid-template-areas: 
+            "links bloc";  
+}
+
+/* Style the footer logo */
+.bloc {
+        grid-area: bloc;
+        overflow: hidden;
+        background-image: url(images/bbox_logo.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+        text-align: center; 
+    }
+
+.bloc a {
+    text-decoration: none;
+}
+
+/* Style the footer links */
+.links {
+    grid-area: links;
+    overflow: hidden;
+    text-align: center;
+    align-self: center;
+    padding-left: 16px;
+}
+
+.links a {
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 9.5px;
+}
+
+.links a:hover {
+    color: #3FA9F0;
+}
+
+span {
+    margin:0 10px;
+}
+
+span:first-of-type{
+    margin-left:0;
+}
+
+span:last-of-type{
+    margin-right:0;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="saas.css">    
+<style>
+</style>
+<body>
+    <div class="header">
+        <header>
+            <a href="home.html" class="logo" style="color: transparent">CompanyLogo</a>
+            <div class="header-right">
+                <span class="avatar"><a href="userprofile.html"><img src="images/img_avatar.png" alt="Avatar" class="image" style="width:25px"></a></span>
+                <button class="menubtn" onclick="myFunction()"><i class="fas fa-bars"></i></button>
+            </div>
+        </header>
+    </div>
+ 
+    <div id="mySidenav" class="sidenav">
+        <a href="home.html"><i class="fas fa-home"></i></a>
+        <a href="allitems.html"><i class="fas fa-th"></i></a>
+        <a href="notes.html"><i class="fas fa-file-alt"></i></a>
+        <a href="images.html"><i class="fas fa-images"></i></a>
+        <a class="active" href="links.html"><i class="fas fa-link"></i></a>
+        <a href="boxes.html"><i class="fas fa-box-open"></i></a>
+        <a href="userprofile.html"><i class="fas fa-user"></i></a>
+    </div>
+    
+    <div id="myContainer" class="container">
+        <div class="add">
+            <uL>
+                <li><i class="fas fa-cloud-upload-alt" style="font-size: 3em"></i></li>
+                 <li> <i class="fas fa-file"> <i class="fas fa-images"></i> <i class="fas fa-link"></i></i></li>
+                 <li>Drag & Drop</li>
+                 <li>or</li>
+                <a href="newlink.html"><button>+ ADD</button></a>
+            </uL>
+            </div>
+        
+            <div>
+                <article><b><i class="fab fa-codepen" style="color: black"></i> codepen.com</b>
+                <p>CodePen is a social development environment for front-end designers and developers.
+                It’s the best place to build and deploy a website, show off your work, build test cases, and find inspiration.</p></article>
+            </div>
+        
+           <div>
+               <article><b><i class="fab fa-font-awesome" style="color: skyblue"></i></b> fontawesome.com
+               <p>Get vector icons and social logos on your website with Font Awesome, the web's most popular icon set and toolkit.</p>
+               </article>
+        
+           </div>
+                
+            
+            <div>
+                <article><b><i class="fab fa-invision" style="color: red"></i> invision.com</b>
+                        <p>DESIGN BETTER. FASTER. TOGETHER. The digital product design platform powering the best user experiences</p></article></div>
+        
+            <div>
+            <article>
+                <b><i class="fab fa-behance-square" style="color: blue"></i> behance.com</b>
+                <p>Showcase & Discover Creative Work.</p>
+            </article>
+            </div>
+        
+            <div>
+            <article>
+                <b><i class="fab fa-figma" style="color: palevioletred"></i> figma.com</b>
+                <p>A better way to design. Design, prototype, and collaborate all in the browser—with Figma.</p>
+            </article>
+            </div>
+        
+            <div>
+            <article>
+                <b><i class="fab fa-github-square" style="color: green"></i> github.com</b>
+                <p>Built for developers GitHub is a development platform inspired by the way you work. From open source to business, you can host and review code, manage projects, and build software alongside 31 million developers.</p>
+            </article>
+            </div>
+        
+            <div>
+            <article>
+                <b><i class="fab fa-sketch" style="color:gold"></i> sketchapp.com</b>
+                <p>The digital design toolkit Find your focus with Dark Mode in Sketch. Hit the lights, lose the distractions and watch your designs come to life, letting you focus on what matters most — your work.</p>
+            </article>
+            </div>
+        
+            <div>
+            <article>
+                <b><i class="fab fa-wordpress" style="color: darkslategray"></i> wordpress.org</b>
+                <p>Get WordPress Use the software that powers over 33% of the web. Democratize Publishing The freedom to build. The freedom to change. The freedom to share.</p>
+            </article>
+            </div>
+        
+            <div>
+            <article>
+                <b><i class="fab fa-mailchimp" style="color: lightgreen"></i> mailchimp.com</b>
+                <p>Your business was born for this Become the brand you want to be with smarter marketing built for big things.</p>
+            </article>
+            </div>
+        
+            <div>
+            <article>
+                <b><i class="fab fa-dribbble" style="color: hotpink"></i> dribbble.com</b>
+                <p>Dribbble is where designers gain inspiration, feedback, community, and jobs and is your best resource to discover and connect with designers worldwide.</p>
+            </article>
+            </div>
+        
+            <div>
+            <article>
+                <b><i class="fab fa-adobe" style="color: firebrick"></i> adobe.com</b>
+                <p>Adobe is changing the world through digital experiences. We help our customers create, deliver and optimize content and applications.</p>
+            </article>
+            </div>
+     </div>
+    
+    <div class="footer">
+        <div class="bloc">
+            <a href="home.html"><h1 style="font-size: 30px; color: transparent">Blocbox</h1></a>
+        </div>
+
+        <div class="links">
+            <a>&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Blocbox</a>
+            <a href="#terms">Terms/</a>
+            <a href="#privacypolicy">Privacy Policy/</a>
+            <a href="#contactus">Contact Us/</a>
+            <a href="#aboutus">About Us</a><span></span><span></span>
+            <a><i class="fab fa-facebook-square"></i></a>
+            <a><i class="fab fa-twitter-square"></i></a>
+        </div>
+    </div>
+    
+<script>
+    function myFunction() {
+  var x = document.getElementById("mySidenav");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+ 
+window.onclick = function(event) {
+  if (event.target === myContainer) {
+    mySidenav .style .display = "none";
+  }
+}        
+</script>
+</body>
+</html>

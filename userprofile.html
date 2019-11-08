@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="saas.css">    
+<style>
+</style>
+<body>
+    <div class="header">
+        <header>
+            <a href="home.html" class="logo" style="color: transparent">CompanyLogo</a>
+            <div class="header-right">
+                <span class="avatar"><a href="userprofile.html"><img src="images/img_avatar.png" alt="Avatar" class="image" style="width: 25px"></a></span>
+                <button class="menubtn" onclick="myFunction()"><i class="fas fa-bars"></i></button>
+            </div>
+        </header>
+    </div>
+ 
+    <div id="mySidenav" class="sidenav">
+        <a href="home.html"><i class="fas fa-home"></i></a>
+        <a href="allitems.html"><i class="fas fa-th"></i></a>
+        <a href="notes.html"><i class="fas fa-file-alt"></i></a>
+        <a href="images.html"><i class="fas fa-images"></i></a>
+        <a href="links.html"><i class="fas fa-link"></i></a>
+        <a href="boxes.html"><i class="fas fa-box-open"></i></a>
+        <a class="active" href="userprofile.html"><i class="fas fa-user"></i></a>
+    </div>
+    
+    <div id="myContainer" class="container">
+        
+        <div class="card">
+            <button></button>
+            <img src="images/img_avatar.png" alt="avatar" style="width: 50px; height: 50px">
+            <h4>User Name</h4>
+            <ul>
+                <li><a>Account: Casual</a></li>
+                <li><a>Boxes: 5</a></li>
+                <li><a>Collaborators: 10</a></li>
+                <li><a>Storage: 2GB (1.7GB used)</a></li>
+            </ul>
+            <a href="upgrade.html"><button><h3>Upgrade</h3></button></a>
+        </div>
+        
+        <div class="userinfo">
+            <article>
+                <label for="user"><b><i class="fas fa-user-circle"></i> User Image</b></label><br>
+                <a href="avatar.html"><button>Edit Image</button></a><br>
+                <label for="user"><b><i class="fas fa-id-card"></i> Name</b></label>
+                <input type="text" placeholder="User Name" name="user"><br>
+                <label for="user"><b><i class="fas fa-envelope"></i> Email</b></label>
+                <input type="text" placeholder="username@blocbox.io" name="email"><br>
+                <label for="psw"><b><i class="fas fa-lock"></i> Password</b></label>
+                <input type="password" placeholder="********" name="psw"><br>
+                <a href="reset.html"><button>Change Password</button></a>
+            </article>
+        </div>
+        
+        <div class="price">
+            <button><h3>Casual</h3></button>
+            <ul><h2>Free</h2></ul>
+            <ul>
+                <li>Up to 5 Boxes</li>
+                <li>Up to 10 Collaborators</li>
+                <li>2GB of Storage</li>
+                <li>* * * * *</li>
+            </ul>
+            <button><h3>Current Account</h3></button>
+        </div>
+        
+        <div class="price">
+            <button><h3>Professional</h3></button>
+            <ul><h2>$5/Month</h2></ul>
+            <ul>
+                <li>Unlimited Boxes</li>
+                <li>Up to 20 Collaborators</li>
+                <li>5GB of Storage</li>
+                <li>Real time collaboration</li>
+            </ul>
+            <a href="upgrade.html"><button><h3>Upgrade</h3></button></a>
+        </div>
+        
+        <div class="price">
+            <button><h3>Expert</h3></button>
+            <ul><h2>$10/Month</h2></ul>
+            <ul>
+                <li>Unlimited Boxes</li>
+                <li>Unlimited Collaborators</li>
+                <li>Unlimited Storage</li>
+                <li>Real time collaboration</li>
+            </ul>
+            <a href="upgrade.html"><button><h3>Upgrade</h3></button></a>
+        </div>
+
+    </div>    
+    
+    <div class="footer">
+        <div class="bloc">
+            <a href="home.html"><h1 style="font-size: 30px; color: transparent">Blocbox</h1></a>
+        </div>
+
+        <div class="links">
+            <a>&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Blocbox</a>
+            <a href="#terms">Terms/</a>
+            <a href="#privacypolicy">Privacy Policy/</a>
+            <a href="#contactus">Contact Us/</a>
+            <a href="#aboutus">About Us</a><span></span><span></span>
+            <a><i class="fab fa-facebook-square"></i></a>
+            <a><i class="fab fa-twitter-square"></i></a>
+        </div>
+    </div>
+    
+<script>
+    function myFunction() {
+  var x = document.getElementById("mySidenav");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+ 
+window.onclick = function(event) {
+  if (event.target === myContainer) {
+    mySidenav .style .display = "none";
+  }
+}        
+</script>
+</body>
+</html>
